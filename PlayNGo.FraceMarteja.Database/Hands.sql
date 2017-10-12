@@ -1,0 +1,11 @@
+﻿CREATE TABLE [dbo].[Hands]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY,
+	[Name] NVARCHAR(100),
+	[RankOrder] INT,
+	[CreatedBy] NVARCHAR(50) NOT NULL DEFAULT 'system', 
+    [CreatedDate] DATETIME NOT NULL DEFAULT GETUTCDATE(),
+	[ModifiedBy] NVARCHAR(50) NULL, 
+    [ModifiedDate] DATETIME NULL, 
+    [Deleted] BIT NOT NULL DEFAULT 0,
+)
